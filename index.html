@@ -247,6 +247,103 @@ body.presentation-mode .wrap{max-width:1320px}
 @media(max-width:900px){.knowledge-strip{grid-template-columns:1fr}.landmark-grid,.person-grid{grid-template-columns:1fr 1fr}.then-now{grid-template-columns:1fr}}
 @media(max-width:600px){.landmark-grid,.person-grid{grid-template-columns:1fr}.mini-dashboard{grid-template-columns:1fr}.level-chip{display:none}.journey-bar{top:70px}}
 
+
+
+/* ===== قالب الرسالة الوطنية الفاخر ===== */
+.message-builder{overflow:visible}
+.message-actions{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 18px}
+.message-card{position:relative;overflow:hidden;min-height:520px;background:radial-gradient(circle at 50% 12%,rgba(213,176,95,.13),transparent 24%),linear-gradient(145deg,#fffef8,#f8f5e9 55%,#fff);border:2px solid #c9a850;border-radius:28px;padding:14px;box-shadow:0 28px 70px rgba(40,64,44,.16)}
+.message-card:before{content:"";position:absolute;inset:11px;border:1px solid rgba(0,108,53,.42);border-radius:20px;pointer-events:none}
+.message-card:after{content:"96";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:17rem;font-weight:900;color:rgba(0,108,53,.035);line-height:1;pointer-events:none}
+.message-inner{position:relative;z-index:2;min-height:490px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:38px 36px}
+.message-mark{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#006c35,#0b9c55);color:#fff;font-size:1.7rem;font-weight:900;border:6px solid #f0dfac;box-shadow:0 10px 30px rgba(0,108,53,.2);margin-bottom:12px}
+.message-country{font-weight:900;color:#13462d;font-size:1rem}.message-occasion{color:#9b7728;font-weight:900;font-size:.88rem;margin-top:4px}
+.message-title{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#074e2c;margin:18px 0 10px}
+.message-name{font-size:1.25rem;font-weight:900;color:#0b6a3a;padding:6px 26px 9px;border-bottom:2px solid #d8ba68;min-width:min(420px,90%)}
+.message-text{max-width:700px;margin-top:24px;font-size:1.08rem;line-height:2.2;color:#435b4d;white-space:pre-wrap}
+.message-footer{margin-top:30px;color:#94732a;font-weight:900;font-size:1rem}
+.message-corner{position:absolute;width:84px;height:84px;z-index:1}.message-corner:before,.message-corner:after{content:"";position:absolute;background:linear-gradient(90deg,#c8a44a,#e8d18d)}
+.message-corner:before{width:68px;height:3px}.message-corner:after{width:3px;height:68px}.message-corner.top-right{right:24px;top:24px}.message-corner.top-left{left:24px;top:24px;transform:scaleX(-1)}.message-corner.bottom-right{right:24px;bottom:24px;transform:scaleY(-1)}.message-corner.bottom-left{left:24px;bottom:24px;transform:scale(-1)}
+#printMessageRoot{display:none}
+@media(max-width:700px){.message-inner{padding:32px 20px}.message-card{min-height:580px}}
+@media print{
+  body.printing-message > *:not(#printMessageRoot){display:none!important}
+  body.printing-message #printMessageRoot{display:block!important;visibility:visible!important;position:fixed!important;inset:0!important;width:100%!important;height:100%!important;min-height:0!important;margin:0!important;padding:0!important;border-radius:0!important;box-shadow:none!important;overflow:hidden!important;background:#fffef8!important;print-color-adjust:exact!important;-webkit-print-color-adjust:exact!important}
+  body.printing-message #printMessageRoot,body.printing-message #printMessageRoot *{visibility:visible!important}
+  body.printing-message #printMessageRoot .message-inner{width:100%!important;height:100%!important;min-height:0!important;padding:18mm 20mm!important;justify-content:center!important}
+  body.printing-message #printMessageRoot:before{inset:4mm!important;border-radius:0!important}
+  @page{size:A4 landscape;margin:0}
+}
+
+/* ===== المسابقة الوطنية المطورة ===== */
+.national-quiz-shell{max-width:900px;margin:auto;padding:32px}
+.quiz-topline{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:8px}
+.quiz-topline strong{display:block;color:#0a5f35;font-size:1rem}
+.quiz-topline span{display:inline-block;margin-top:6px;background:#e8f6ed;color:#08703d;border-radius:999px;padding:6px 10px;font-size:.8rem;font-weight:900}
+.mini-score{background:#f8f4e8;border:1px solid #ead9a9;padding:10px 14px;border-radius:14px;color:#6a5520}
+.quiz-finish{text-align:center;padding:30px 10px}
+.finish-score{width:140px;height:140px;border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;font-size:2.2rem;font-weight:900;color:#fff;background:conic-gradient(var(--gold),var(--green));box-shadow:0 18px 45px rgba(0,80,42,.18)}
+
+/* ===== الشهادة الفاخرة ===== */
+.certificate-builder{overflow:visible}
+.cert-actions{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 18px}
+.certificate-card{
+  position:relative;overflow:hidden;min-height:610px;background:
+  radial-gradient(circle at 50% 15%,rgba(213,176,95,.13),transparent 22%),
+  linear-gradient(145deg,#fffef8,#f8f5e9 55%,#fff);
+  border:2px solid #c9a850;border-radius:28px;padding:14px;box-shadow:0 28px 70px rgba(40,64,44,.18);
+}
+.certificate-card:before{content:"";position:absolute;inset:11px;border:1px solid rgba(0,108,53,.42);border-radius:20px;pointer-events:none}
+.certificate-card:after{content:"96";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:18rem;font-weight:900;color:rgba(0,108,53,.035);line-height:1;pointer-events:none}
+.cert-inner{position:relative;z-index:2;min-height:580px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:42px 40px}
+.cert-mark{width:82px;height:82px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#006c35,#0b9c55);color:#fff;font-size:1.8rem;font-weight:900;border:6px solid #f0dfac;box-shadow:0 10px 30px rgba(0,108,53,.2);margin-bottom:12px}
+.cert-country{font-weight:900;color:#13462d;font-size:1.03rem}
+.cert-occasion{color:#9b7728;font-weight:900;font-size:.9rem;margin-top:4px}
+.cert-title{font-size:clamp(2.2rem,4vw,3.6rem);font-weight:900;color:#074e2c;margin:18px 0 2px;letter-spacing:-.03em}
+.cert-subtitle{font-size:1.15rem;color:#866720;font-weight:800}
+.cert-award{margin-top:22px;color:#6f7c73}
+.cert-name{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#0b6a3a;margin:8px 0 13px;padding:4px 28px 9px;border-bottom:2px solid #d8ba68;min-width:min(520px,90%)}
+.cert-text{max-width:720px;line-height:2;color:#4e6256;font-size:.98rem}
+.cert-score{margin-top:16px;background:#f2ebd6;color:#6f5720;border-radius:999px;padding:8px 16px;font-weight:800}
+.cert-signatures{width:100%;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px;padding-top:20px;border-top:1px solid #ded3b0}
+.cert-signatures div{position:relative;padding-top:8px}
+.cert-signatures span{display:block;color:#7c877f;font-size:.78rem;margin-bottom:5px}
+.cert-signatures strong{color:#173c29;font-size:.9rem}
+.cert-footer-line{margin-top:26px;color:#94732a;font-weight:900;font-size:.9rem}
+.cert-corner{position:absolute;width:92px;height:92px;z-index:1;opacity:.95}
+.cert-corner:before,.cert-corner:after{content:"";position:absolute;background:linear-gradient(90deg,#c8a44a,#e8d18d)}
+.cert-corner:before{width:74px;height:3px}.cert-corner:after{width:3px;height:74px}
+.cert-corner.top-right{right:24px;top:24px}.cert-corner.top-left{left:24px;top:24px;transform:scaleX(-1)}
+.cert-corner.bottom-right{right:24px;bottom:24px;transform:scaleY(-1)}.cert-corner.bottom-left{left:24px;bottom:24px;transform:scale(-1)}
+@media(max-width:700px){.cert-signatures{grid-template-columns:1fr;gap:8px}.cert-inner{padding:34px 20px}.certificate-card{min-height:720px}}
+@media print{
+  body.printing-certificate *{visibility:hidden!important}
+  body.printing-certificate #certOutput,body.printing-certificate #certOutput *{visibility:visible!important}
+  body.printing-certificate #certOutput{position:fixed;inset:0;width:100%;height:100%;margin:0;border-radius:0;box-shadow:none;background:#fffef8!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  @page{size:A4 landscape;margin:8mm}
+}
+
+/* ===== طباعة شهادة واحدة فقط ===== */
+#printRoot{display:none}
+@media print{
+  html,body{margin:0!important;padding:0!important;width:100%!important;height:100%!important;overflow:hidden!important;background:#fff!important}
+  body.printing-certificate > *:not(#printRoot){display:none!important}
+  body.printing-certificate #printRoot{
+    display:block!important;visibility:visible!important;position:fixed!important;inset:0!important;
+    width:100%!important;height:100%!important;min-height:0!important;
+    margin:0!important;padding:0!important;border-radius:0!important;box-shadow:none!important;
+    overflow:hidden!important;background:#fffef8!important;
+    print-color-adjust:exact!important;-webkit-print-color-adjust:exact!important
+  }
+  body.printing-certificate #printRoot,body.printing-certificate #printRoot *{visibility:visible!important}
+  body.printing-certificate #printRoot .cert-inner{
+    width:100%!important;height:100%!important;min-height:0!important;
+    padding:16mm 18mm!important;justify-content:center!important
+  }
+  body.printing-certificate #printRoot:before{inset:4mm!important;border-radius:0!important}
+  @page{size:A4 landscape;margin:0}
+}
+
 </style>
 </head>
 <body>
@@ -432,94 +529,21 @@ body.presentation-mode .wrap{max-width:1320px}
 
 <section class="section" id="games">
 <div class="wrap">
-  <div class="eyebrow">مركز الألعاب</div>
-  <h2>العبي… وتعلمي… واجمعي النقاط</h2>
-  <p class="lead">كل إجابة صحيحة تمنحك نقاطًا، ومع تقدمك تفتحين شارات وطنية داخل الموقع.</p>
+  <div class="eyebrow">المسابقة الوطنية</div>
+  <h2>تحدي وطن 96</h2>
+  <p class="lead">مسابقة اختيار من متعدد فقط، تضم 10 أسئلة متنوعة وغير متكررة عن تاريخ المملكة وجغرافيتها ورؤية 2030 ومعالمها ومشاريعها. كل إجابة صحيحة تمنحك 5 نقاط.</p>
 
   <div class="games">
-    <div class="tabs">
-      <button class="tab active" data-game="tf">صح أم خطأ</button>
-      <button class="tab" data-game="mcq">اختيار من متعدد</button>
-      <button class="tab" data-game="memory">ذاكرة الوطن</button>
-      <button class="tab" data-game="guess">خمن المعلم</button>
-      <button class="tab" data-game="sortGame">رتبي الأحداث</button>
-      <button class="tab" data-game="revealGame">اكشفي الصورة</button>
-      <button class="tab" data-game="challenge">تحدي 96</button>
-    </div>
-
-    <div class="game active" id="tf">
-      <div class="quizbox">
-        <div class="q" id="tfQ"></div>
-        <div class="options">
-          <button class="option" onclick="answerTF(true)">صح</button>
-          <button class="option" onclick="answerTF(false)">خطأ</button>
-        </div>
-        <div class="result" id="tfR"></div>
+    <div class="quizbox national-quiz-shell">
+      <div class="quiz-topline">
+        <div><strong id="mcqCounter">السؤال 1 من 10</strong><span id="mcqCategory">المملكة</span></div>
+        <div class="mini-score">إجابات صحيحة: <b id="mcqCorrect">0</b></div>
       </div>
-    </div>
-
-    <div class="game" id="mcq">
-      <div class="quizbox">
-        <div class="q" id="mcqQ"></div>
-        <div class="options" id="mcqO"></div>
-        <div class="result" id="mcqR"></div>
-      </div>
-    </div>
-
-    <div class="game" id="memory">
-      <div class="memory" id="memoryGrid"></div>
-      <div class="result" id="memoryR"></div>
-    </div>
-
-    <div class="game" id="guess">
-      <div class="quizbox">
-        <div class="q">أي موقع يرتبط بتاريخ وتراث المملكة ويقع في منطقة العلا؟</div>
-        <div class="options">
-          <button class="option" onclick="guessLandmark(this,true)">الحِجر</button>
-          <button class="option" onclick="guessLandmark(this,false)">الربع الخالي</button>
-          <button class="option" onclick="guessLandmark(this,false)">وادي الدواسر</button>
-        </div>
-        <div class="result" id="guessR"></div>
-      </div>
-    </div>
-
-    <div class="game" id="sortGame">
-      <div class="quizbox">
-        <div class="q">رتبي مراحل الرحلة الوطنية من الأقدم إلى الأحدث</div>
-        <p class="lead">اسحبي البطاقات للأعلى أو الأسفل، ثم تحققي من ترتيبك.</p>
-        <div class="sort-list" id="sortList">
-          <div class="sort-item" draggable="true" data-order="4">رؤية السعودية 2030 <span>↕</span></div>
-          <div class="sort-item" draggable="true" data-order="2">التوسع في بناء المؤسسات والخدمات <span>↕</span></div>
-          <div class="sort-item" draggable="true" data-order="1">توحيد المملكة وبناء الدولة الحديثة <span>↕</span></div>
-          <div class="sort-item" draggable="true" data-order="3">التوسع في التحول الرقمي والتقني <span>↕</span></div>
-        </div>
-        <button class="btn" style="background:var(--green);color:#fff;margin-top:12px" onclick="checkSort()">تحققي من الترتيب</button>
-        <div class="result" id="sortResult"></div>
-      </div>
-    </div>
-
-    <div class="game" id="revealGame">
-      <div class="quizbox">
-        <div class="q">اكشفي المعلم الوطني</div>
-        <p class="lead">كل ضغطة تكشف جزءًا من اللغز. حاولي تخمين المعلم قبل فتح جميع المربعات.</p>
-        <div class="reveal-board" id="revealBoard"></div>
-        <div class="options">
-          <button class="option" onclick="answerReveal(this,true)">الدرعية</button>
-          <button class="option" onclick="answerReveal(this,false)">الربع الخالي</button>
-          <button class="option" onclick="answerReveal(this,false)">النفود</button>
-        </div>
-        <div class="result" id="revealResult"></div>
-      </div>
-    </div>
-
-    <div class="game" id="challenge">
-      <div class="quizbox">
-        <div class="q">تحدي اليوم الوطني 96</div>
-        <p class="lead">خمسة أسئلة متتالية. كل إجابة صحيحة = 10 نقاط، وإكمال التحدي يمنحك مكافأة إضافية.</p>
-        <div class="progress"><div id="chProgress"></div></div>
-        <div id="chArea" style="margin-top:18px"></div>
-        <button class="btn" style="background:var(--green);color:#fff;margin-top:12px" onclick="startChallenge()">ابدئي التحدي</button>
-      </div>
+      <div class="progress"><div id="mcqProgress"></div></div>
+      <div class="q" id="mcqQ" style="margin-top:22px"></div>
+      <div class="options" id="mcqO"></div>
+      <div class="result" id="mcqR"></div>
+      <div id="mcqFinish" style="display:none"></div>
     </div>
   </div>
 
@@ -533,36 +557,63 @@ body.presentation-mode .wrap{max-width:1320px}
 </div>
 </section>
 
-
-<section class="section" id="finalQuiz">
-<div class="wrap">
-  <div class="eyebrow">الاختبار الختامي</div>
-  <h2>هل تستحقين لقب سفيرة وطن 96؟</h2>
-  <p class="lead">عشرة أسئلة تجمع بين التاريخ، والجغرافيا، والرؤية، والمشاريع، والهوية الوطنية. نتيجتك تظهر مباشرة.</p>
-  <div class="final-shell">
-    <h3>اختبار سفيرة الوطن</h3>
-    <p>ابدئي الاختبار وأجيبي عن الأسئلة واحدًا تلو الآخر. كل إجابة صحيحة ترفع نتيجتك وتضيف نقاطًا لحسابك.</p>
-    <div id="finalArea"><button class="btn light" onclick="startFinalQuiz()">ابدئي الاختبار النهائي</button></div>
-  </div>
-</div>
-</section>
-
 <section class="section" id="wall">
 <div class="wrap">
   <div class="eyebrow">جدار الفخر</div>
   <h2>اتركي بصمتك للوطن</h2>
   <div class="wall">
-    <div class="panel">
-      <h3>كلمة للوطن</h3>
+    <div class="panel message-builder">
+      <h3>رسالتي لوطني</h3>
+      <p class="lead">اكتبي اسم الطالبة ورسالتها للوطن، ثم أنشئي بطاقة وطنية جاهزة للعرض والطباعة.</p>
+      <input id="quoteName" placeholder="اكتبي اسم الطالبة">
       <textarea id="quoteInput" placeholder="اكتبي رسالتك للوطن هنا..."></textarea>
-      <button class="btn" style="background:var(--green);color:#fff;margin-top:10px" onclick="makeQuote()">إنشاء البطاقة</button>
-      <div class="output" id="quoteOutput">هنا ستظهر رسالتك الوطنية 🇸🇦</div>
+      <div class="message-actions">
+        <button class="btn" style="background:var(--green);color:#fff" onclick="makeQuote()">إنشاء الرسالة</button>
+        <button class="btn" style="background:#eef8f2;color:#075a32" onclick="printMessage()">طباعة الرسالة</button>
+      </div>
+      <div class="message-card" id="quoteOutput">
+        <div class="message-corner top-right"></div><div class="message-corner top-left"></div>
+        <div class="message-corner bottom-right"></div><div class="message-corner bottom-left"></div>
+        <div class="message-inner">
+          <div class="message-mark">96</div>
+          <div class="message-country">المملكة العربية السعودية</div>
+          <div class="message-occasion">اليوم الوطني السعودي 96</div>
+          <div class="message-title">رسالتي لوطني</div>
+          <div class="message-name" id="messageName">اسم الطالبة</div>
+          <div class="message-text" id="messageText">هنا ستظهر رسالتك الوطنية بكل فخر واعتزاز.</div>
+          <div class="message-footer">دام عزك يا وطن 🇸🇦</div>
+        </div>
+      </div>
     </div>
-    <div class="panel">
-      <h3>شهادة إتمام رحلة وطن 96</h3>
+    <div class="panel certificate-builder">
+      <h3>شهادة وطن 96</h3>
+      <p class="lead">اكتبي اسم الطالبة ثم أنشئي الشهادة. يمكن طباعتها مباشرة بالحجم المناسب.</p>
       <input id="nameInput" placeholder="اكتبي اسم الطالبة">
-      <button class="btn" style="background:var(--gold);color:#173326;margin-top:10px" onclick="makeCertificate()">إنشاء الشهادة</button> <button class="btn" style="background:#eef8f2;color:#075a32;margin-top:10px" onclick="window.print()">طباعة الشهادة</button>
-      <div class="output" id="certOutput">اجمعي النقاط ثم اكتبي اسمك لتحصلي على بطاقة تذكارية.</div>
+      <div class="cert-actions">
+        <button class="btn" style="background:var(--gold);color:#173326" onclick="makeCertificate()">إنشاء الشهادة</button>
+        <button class="btn" style="background:#eef8f2;color:#075a32" onclick="printCertificate()">طباعة الشهادة</button>
+      </div>
+      <div class="certificate-card" id="certOutput">
+        <div class="cert-corner top-right"></div><div class="cert-corner top-left"></div>
+        <div class="cert-corner bottom-right"></div><div class="cert-corner bottom-left"></div>
+        <div class="cert-inner">
+          <div class="cert-mark">96</div>
+          <div class="cert-country">المملكة العربية السعودية</div>
+          <div class="cert-occasion">اليوم الوطني السعودي 96</div>
+          <div class="cert-title">شهادة إتمام وتميّز</div>
+          <div class="cert-subtitle">في رحلة وطن 96 التفاعلية</div>
+          <div class="cert-award">تُمنح هذه الشهادة للطالبة</div>
+          <div class="cert-name" id="certName">اسم الطالبة</div>
+          <div class="cert-text">تقديرًا لمشاركتها المتميزة في التجربة الوطنية التفاعلية، وإثراء معرفتها بتاريخ المملكة وإنجازاتها ورؤيتها الطموحة نحو المستقبل.</div>
+          <div class="cert-score">النقاط المحققة: <strong id="certScore">0</strong></div>
+          <div class="cert-signatures">
+            <div><span>إعداد</span><strong>أ. بدرية الفارسي</strong></div>
+            <div><span>وكيلة الشؤون التعليمية</span><strong>سالمة العبسي</strong></div>
+            <div><span>مديرة المدرسة</span><strong>ابتسام الثقفي</strong></div>
+          </div>
+          <div class="cert-footer-line">وطنٌ نعتز به… ومستقبلٌ نصنعه</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -574,9 +625,9 @@ body.presentation-mode .wrap{max-width:1320px}
   <h2 style="color:white">بكل فخر… صُنعت هذه التجربة للوطن</h2>
   <div class="creditgrid">
     <div class="credit"><small>الطالبات</small><strong>جمانه سعد الثبيتي — ريفال جبريل راجحي</strong></div>
-    <div class="credit"><small>إعداد الأستاذة</small><strong>بدرية حمدان الفارسي</strong></div>
+    <div class="credit"><small>إعداد الأستاذة</small><strong>أ. بدرية الفارسي</strong></div>
     <div class="credit"><small>وكيلة الشؤون التعليمية</small><strong>سالمة العبسي</strong></div>
-    <div class="credit"><small>مديرة المدرسة</small><strong>ابتسام سعود الثقفي</strong></div>
+    <div class="credit"><small>مديرة المدرسة</small><strong>ابتسام الثقفي</strong></div>
   </div>
   <div class="footer">اليوم الوطني السعودي 96 — وطنٌ نعتز به ومستقبلٌ نصنعه</div>
 </div>
@@ -612,93 +663,54 @@ document.querySelectorAll('.tab').forEach(btn=>{
   };
 });
 
-const tfQs=[
-  {q:'رؤية السعودية 2030 تركز على مجتمع حيوي واقتصاد مزدهر ووطن طموح.',a:true},
-  {q:'عدد مناطق المملكة الإدارية هو 20 منطقة.',a:false},
-  {q:'نيوم من المشاريع الكبرى في المملكة.',a:true},
-  {q:'مدينة الرياض هي عاصمة المملكة العربية السعودية.',a:true},
-  {q:'العلا تشتهر بتاريخها وآثارها وطبيعتها المميزة.',a:true},
-  {q:'التحول الرقمي لا يرتبط بالخدمات الحكومية الحديثة.',a:false}
-];
-let tfi=0;
-function loadTF(){document.getElementById('tfQ').textContent=tfQs[tfi].q;document.getElementById('tfR').textContent='';}
-function answerTF(a){
-  const ok=a===tfQs[tfi].a;
-  document.getElementById('tfR').textContent=ok?'إجابة صحيحة 🇸🇦':'ليست صحيحة، انتقلي للسؤال التالي';
-  if(ok)addScore(8,'أحسنتِ +8');
-  tfi=(tfi+1)%tfQs.length;setTimeout(loadTF,700);
-}
-loadTF();
-
 const mcqs=[
-  {q:'ما عاصمة المملكة العربية السعودية؟',o:['جدة','الرياض','الدمام','أبها'],a:1},
-  {q:'أي مشروع يرتبط بمدينة مستقبلية كبيرة؟',o:['نيوم','سوق عكاظ','وادي حنيفة','الأحساء'],a:0},
-  {q:'أي مدينة تحتضن المسجد النبوي؟',o:['المدينة المنورة','مكة المكرمة','الطائف','تبوك'],a:0},
-  {q:'كم عدد المناطق الإدارية في المملكة؟',o:['10','12','13','15'],a:2},
-  {q:'أي محور من محاور رؤية 2030؟',o:['وطن طموح','مدينة عائمة','تعليم فقط','صناعة فقط'],a:0}
+  {c:'التاريخ',q:'في أي عام ميلادي أُعلن توحيد المملكة العربية السعودية باسمها الحالي؟',o:['1927م','1930م','1932م','1935م'],a:2},
+  {c:'التاريخ',q:'من هو مؤسس المملكة العربية السعودية الحديثة؟',o:['الملك عبدالعزيز بن عبدالرحمن آل سعود','الملك سعود بن عبدالعزيز','الملك فيصل بن عبدالعزيز','الملك خالد بن عبدالعزيز'],a:0},
+  {c:'الجغرافيا',q:'كم عدد المناطق الإدارية في المملكة العربية السعودية؟',o:['11 منطقة','12 منطقة','13 منطقة','14 منطقة'],a:2},
+  {c:'الجغرافيا',q:'ما عاصمة المملكة العربية السعودية؟',o:['جدة','الرياض','مكة المكرمة','الدمام'],a:1},
+  {c:'المعالم',q:'أي موقع تاريخي يقع في الدرعية ويرتبط بتاريخ الدولة السعودية الأولى؟',o:['حي الطريف','جبل أحد','قصر المصمك','جزر فرسان'],a:0},
+  {c:'رؤية 2030',q:'أي من الآتي أحد المحاور الثلاثة لرؤية السعودية 2030؟',o:['مجتمع حيوي','تعليم بلا حدود','مدن فقط','اقتصاد نفطي فقط'],a:0},
+  {c:'المشاريع',q:'أي مشروع سعودي كبير يرتبط بإنشاء منطقة مستقبلية تعتمد على الابتكار والتقنيات المتقدمة؟',o:['نيوم','سوق عكاظ','واحة الأحساء','حي الطريف'],a:0},
+  {c:'الثقافة',q:'أي مدينة سعودية تاريخية اشتهرت ببيوتها القديمة ذات الرواشين؟',o:['جدة التاريخية','بريدة','حائل','الجبيل'],a:0},
+  {c:'الطبيعة',q:'أي من الآتي يصف التنوع الجغرافي للمملكة بصورة أدق؟',o:['صحارى فقط','جبال فقط','سواحل فقط','صحارى وجبال وسواحل وواحات'],a:3},
+  {c:'الهوية',q:'ماذا يعبّر اليوم الوطني السعودي بصورة أساسية؟',o:['الاعتزاز بوحدة الوطن وهويته ومسيرته','الاحتفال بمدينة واحدة','مناسبة رياضية فقط','يوم دراسي عادي'],a:0}
 ];
-let mi=0;
+let mi=0, mcqCorrect=0, mcqLocked=false;
 function loadMCQ(){
-  const x=mcqs[mi];document.getElementById('mcqQ').textContent=x.q;
+  if(mi>=mcqs.length){finishMCQ();return;}
+  const x=mcqs[mi];
+  document.getElementById('mcqCounter').textContent=`السؤال ${mi+1} من ${mcqs.length}`;
+  document.getElementById('mcqCategory').textContent=x.c;
+  document.getElementById('mcqQ').textContent=x.q;
+  document.getElementById('mcqCorrect').textContent=mcqCorrect;
+  document.getElementById('mcqProgress').style.width=`${(mi/mcqs.length)*100}%`;
   const w=document.getElementById('mcqO');w.innerHTML='';
   x.o.forEach((v,i)=>{const b=document.createElement('button');b.className='option';b.textContent=v;b.onclick=()=>answerMCQ(i,b);w.appendChild(b);});
   document.getElementById('mcqR').textContent='';
+  document.getElementById('mcqFinish').style.display='none';
+  mcqLocked=false;
 }
 function answerMCQ(i,b){
+  if(mcqLocked)return;mcqLocked=true;
   const x=mcqs[mi],all=[...document.querySelectorAll('#mcqO .option')];
   all.forEach(z=>z.disabled=true);
-  if(i===x.a){b.classList.add('correct');addScore(10,'رائعة +10');document.getElementById('mcqR').textContent='إجابة صحيحة';}
-  else{b.classList.add('wrong');all[x.a].classList.add('correct');document.getElementById('mcqR').textContent='الإجابة الصحيحة موضحة بالأخضر';}
-  mi=(mi+1)%mcqs.length;setTimeout(loadMCQ,950);
+  if(i===x.a){b.classList.add('correct');mcqCorrect++;addScore(5,'إجابة صحيحة +5');document.getElementById('mcqR').textContent='إجابة صحيحة — أحسنتِ 🇸🇦';}
+  else{b.classList.add('wrong');all[x.a].classList.add('correct');document.getElementById('mcqR').textContent='الإجابة الصحيحة موضحة بالأخضر.';}
+  document.getElementById('mcqCorrect').textContent=mcqCorrect;
+  setTimeout(()=>{mi++;loadMCQ();},900);
 }
+function finishMCQ(){
+  const pct=Math.round((mcqCorrect/mcqs.length)*100);
+  document.getElementById('mcqProgress').style.width='100%';
+  document.getElementById('mcqQ').textContent='أكملتِ تحدي وطن 96 🎉';
+  document.getElementById('mcqO').innerHTML='';
+  document.getElementById('mcqR').textContent='';
+  const title=pct>=90?'سفيرة وطن 96':pct>=75?'خبيرة الوطن':pct>=60?'مستكشفة متميزة':'بداية جميلة';
+  const box=document.getElementById('mcqFinish');box.style.display='block';
+  box.innerHTML=`<div class="quiz-finish"><div class="finish-score">${pct}%</div><h3>${title}</h3><p>أجبتِ عن <strong>${mcqCorrect}</strong> من <strong>${mcqs.length}</strong> سؤالًا بصورة صحيحة.</p><button class="btn" style="background:var(--green);color:white" onclick="restartMCQ()">إعادة المسابقة</button></div>`;
+}
+function restartMCQ(){mi=0;mcqCorrect=0;loadMCQ();}
 loadMCQ();
-
-const pairs=[['الرياض','العاصمة'],['نيوم','مشروع مستقبلي'],['العلا','تراث وآثار'],['2030','رؤية وطنية']];
-let mem=[],first=null,locked=false,matchCount=0;
-function buildMemory(){
-  mem=[];pairs.forEach((p,i)=>{mem.push({t:p[0],p:i});mem.push({t:p[1],p:i});});
-  mem.sort(()=>Math.random()-.5);
-  const g=document.getElementById('memoryGrid');g.innerHTML='';
-  mem.forEach(c=>{const b=document.createElement('button');b.className='mem';b.textContent='؟';b.onclick=()=>flip(b,c);g.appendChild(b);});
-}
-function flip(b,c){
-  if(locked||b.classList.contains('matched')||first?.b===b)return;
-  b.classList.add('open');b.textContent=c.t;
-  if(!first){first={b,c};return;}
-  if(first.c.p===c.p){b.classList.add('matched');first.b.classList.add('matched');matchCount++;addScore(12,'تطابق +12');first=null;
-    if(matchCount===pairs.length)document.getElementById('memoryR').textContent='أكملتِ ذاكرة الوطن بنجاح!';
-  }else{
-    locked=true;setTimeout(()=>{b.classList.remove('open');first.b.classList.remove('open');b.textContent='؟';first.b.textContent='؟';first=null;locked=false;},700);
-  }
-}
-buildMemory();
-
-function guessLandmark(btn,ok){
-  document.querySelectorAll('#guess .option').forEach(x=>x.disabled=true);
-  if(ok){btn.classList.add('correct');document.getElementById('guessR').textContent='صحيح! الحِجر من أبرز المواقع التاريخية في العلا.';addScore(12,'خمنتِ المعلم +12');}
-  else{btn.classList.add('wrong');document.getElementById('guessR').textContent='الإجابة الصحيحة: الحِجر.';}
-}
-
-const challengeQs=[
-  {q:'ما اسم الرؤية الوطنية للتحول؟',o:['رؤية 2020','رؤية 2030','رؤية 2040'],a:1},
-  {q:'أي مدينة هي عاصمة المملكة؟',o:['الرياض','جدة','أبها'],a:0},
-  {q:'أي مشروع يعد من المشاريع الكبرى؟',o:['نيوم','الألب','دلتا النيل'],a:0},
-  {q:'كم عدد المناطق الإدارية؟',o:['11','13','16'],a:1},
-  {q:'أي من التالي يرتبط بالتراث في الدرعية؟',o:['الطريف','الحجر الأسود','الربع الخالي'],a:0}
-];
-let ci=0;
-function startChallenge(){ci=0;renderChallenge();}
-function renderChallenge(){
-  const a=document.getElementById('chArea');
-  if(ci>=challengeQs.length){
-    a.innerHTML='<h3>أتممتِ تحدي 96 🎉</h3><p>ممتاز! حصلتِ على مكافأة إكمال التحدي.</p>';
-    document.getElementById('chProgress').style.width='100%';addScore(20,'مكافأة التحدي +20');return;
-  }
-  document.getElementById('chProgress').style.width=(ci/challengeQs.length*100)+'%';
-  const x=challengeQs[ci];
-  a.innerHTML=`<h3>${x.q}</h3><div class="options">${x.o.map((v,i)=>`<button class="option" onclick="answerChallenge(${i})">${v}</button>`).join('')}</div>`;
-}
-function answerChallenge(i){if(i===challengeQs[ci].a)addScore(10,'صحيح +10');ci++;renderChallenge();}
 
 const regions={
   riyadh:{e:'🏙️',t:'الرياض',p:'عاصمة المملكة ومركز إداري واقتصادي وثقافي رئيسي، وتشهد توسعًا حضريًا ومشاريع تطوير كبرى.'},
@@ -716,13 +728,70 @@ function showRegion(k){
   addScore(3,'اكتشاف جديد +3');
 }
 function makeQuote(){
-  const v=document.getElementById('quoteInput').value.trim();
-  document.getElementById('quoteOutput').textContent=v?`"${v}" — للوطن بكل فخر 🇸🇦`:'اكتبي رسالة أولًا';
-  if(v)addScore(5,'رسالة وطنية +5');
+  const name=document.getElementById('quoteName').value.trim();
+  const text=document.getElementById('quoteInput').value.trim();
+  if(!name || !text){
+    document.getElementById('messageName').textContent=name || 'اكتبي اسم الطالبة';
+    document.getElementById('messageText').textContent=text || 'اكتبي رسالة للوطن أولًا';
+    return;
+  }
+  document.getElementById('messageName').textContent=name;
+  document.getElementById('messageText').textContent=text;
+  document.getElementById('quoteOutput').classList.add('ready');
+  addScore(5,'تم إنشاء رسالتك الوطنية +5');
+}
+function printMessage(){
+  const name=document.getElementById('quoteName').value.trim();
+  const text=document.getElementById('quoteInput').value.trim();
+  if(!name || !text){ makeQuote(); return; }
+  makeQuote();
+  const existing=document.getElementById('printMessageRoot');
+  if(existing) existing.remove();
+  const clone=document.getElementById('quoteOutput').cloneNode(true);
+  clone.id='printMessageRoot';
+  document.body.appendChild(clone);
+  document.body.classList.add('printing-message');
+  const cleanup=()=>{
+    document.body.classList.remove('printing-message');
+    const root=document.getElementById('printMessageRoot');
+    if(root) root.remove();
+    window.removeEventListener('afterprint',cleanup);
+  };
+  window.addEventListener('afterprint',cleanup);
+  window.print();
+  setTimeout(cleanup,1200);
 }
 function makeCertificate(){
   const n=document.getElementById('nameInput').value.trim();
-  document.getElementById('certOutput').innerHTML=n?`<div><strong style="font-size:1.45rem">${n}</strong><br>أتممتِ رحلة وطن 96 التفاعلية<br>بكل فخر واعتزاز 🇸🇦<br><small>مجموع النقاط: ${score}</small></div>`:'اكتبي الاسم أولًا';
+  if(!n){document.getElementById('certName').textContent='اكتبي اسم الطالبة أولًا';return;}
+  document.getElementById('certName').textContent=n;
+  document.getElementById('certScore').textContent=score;
+  document.getElementById('certOutput').classList.add('ready');
+  addScore(2,'تم إنشاء الشهادة');
+}
+function printCertificate(){
+  const n=document.getElementById('nameInput').value.trim();
+  if(!n){makeCertificate();return;}
+
+  const existing=document.getElementById('printRoot');
+  if(existing) existing.remove();
+
+  const source=document.getElementById('certOutput');
+  const clone=source.cloneNode(true);
+  clone.id='printRoot';
+  clone.classList.add('print-only-certificate');
+  document.body.appendChild(clone);
+  document.body.classList.add('printing-certificate');
+
+  const cleanup=()=>{
+    document.body.classList.remove('printing-certificate');
+    const root=document.getElementById('printRoot');
+    if(root) root.remove();
+    window.removeEventListener('afterprint',cleanup);
+  };
+  window.addEventListener('afterprint',cleanup);
+  window.print();
+  setTimeout(cleanup,1200);
 }
 
 
@@ -764,70 +833,6 @@ function togglePresentation(){
 }
 
 function landmarkPoint(name){addScore(2,`استكشفتِ ${name} +2`);}
-
-// لعبة الترتيب بالسحب
-let dragEl=null;
-document.querySelectorAll('#sortList .sort-item').forEach(item=>{
-  item.addEventListener('dragstart',()=>{dragEl=item;item.classList.add('dragging');});
-  item.addEventListener('dragend',()=>{item.classList.remove('dragging');dragEl=null;});
-});
-const sortList=document.getElementById('sortList');
-if(sortList) sortList.addEventListener('dragover',e=>{
-  e.preventDefault();
-  const after=[...sortList.querySelectorAll('.sort-item:not(.dragging)')].find(x=>e.clientY<=x.getBoundingClientRect().top+x.offsetHeight/2);
-  if(!dragEl)return;
-  if(after)sortList.insertBefore(dragEl,after);else sortList.appendChild(dragEl);
-});
-function checkSort(){
-  const order=[...document.querySelectorAll('#sortList .sort-item')].map(x=>Number(x.dataset.order));
-  const ok=order.every((v,i)=>v===i+1);
-  document.getElementById('sortResult').textContent=ok?'ترتيب ممتاز! فهمتِ تسلسل الرحلة الوطنية.':'الترتيب ليس صحيحًا بعد، حاولي مرة أخرى.';
-  if(ok)addScore(15,'ترتيب صحيح +15');
-}
-
-// لعبة كشف الصورة الرمزية
-function buildReveal(){
-  const board=document.getElementById('revealBoard');if(!board)return;board.innerHTML='';
-  ['د','ر','ع','ي','ة','🏛️','ت','ا','ر'].forEach((v,i)=>{const b=document.createElement('button');b.className='reveal-tile';b.textContent='؟';b.dataset.value=v;b.onclick=()=>{if(!b.classList.contains('open')){b.classList.add('open');b.textContent=b.dataset.value;}};board.appendChild(b);});
-}
-function answerReveal(btn,ok){
-  document.querySelectorAll('#revealGame .option').forEach(x=>x.disabled=true);
-  if(ok){btn.classList.add('correct');document.getElementById('revealResult').textContent='صحيح! المعلم المقصود هو الدرعية.';addScore(14,'كشفتِ المعلم +14');}
-  else{btn.classList.add('wrong');document.getElementById('revealResult').textContent='حاولي تذكر تاريخ الدولة السعودية… الإجابة: الدرعية.';}
-}
-buildReveal();
-
-const finalQuestions=[
-{q:'كم عدد المناطق الإدارية في المملكة؟',o:['11','13','15'],a:1},
-{q:'أي من الآتي محور في رؤية السعودية 2030؟',o:['وطن طموح','مدينة طموحة فقط','تعليم بلا اقتصاد'],a:0},
-{q:'ما عاصمة المملكة العربية السعودية؟',o:['الرياض','جدة','الدمام'],a:0},
-{q:'أي موقع يرتبط بتاريخ الدولة السعودية في الدرعية؟',o:['حي الطريف','الربع الخالي','جزر فرسان'],a:0},
-{q:'أي مشروع يعد من المشاريع السعودية الكبرى؟',o:['نيوم','دلتا النيل','الألب'],a:0},
-{q:'ما المدينة التي تحتضن المسجد النبوي الشريف؟',o:['المدينة المنورة','الطائف','تبوك'],a:0},
-{q:'أي منطقة تشتهر بطبيعتها الجبلية وهوائها المعتدل؟',o:['عسير','الربع الخالي','الشرقية فقط'],a:0},
-{q:'أي مجال يعد من ميادين التحول الحديثة في المملكة؟',o:['التحول الرقمي','إلغاء التقنية','تقليل التعليم'],a:0},
-{q:'أي عبارة تصف التنوع الجغرافي للمملكة بدقة أكبر؟',o:['سواحل وجبال وصحارى وواحات','صحارى فقط','سواحل فقط'],a:0},
-{q:'ما الفكرة الأساسية من اليوم الوطني؟',o:['الاعتزاز بالوحدة والهوية ومسيرة الوطن','الاحتفال بمدينة واحدة فقط','إلغاء التاريخ'],a:0}
-];
-let fqIndex=0,finalScore=0;
-function startFinalQuiz(){fqIndex=0;finalScore=0;renderFinal();}
-function renderFinal(){
-  const area=document.getElementById('finalArea');
-  if(fqIndex>=finalQuestions.length){
-    const pct=finalScore*10,deg=pct*3.6;
-    const title=pct>=90?'سفيرة وطن 96':pct>=70?'خبيرة الوطن':pct>=50?'مستكشفة متميزة':'بداية جميلة';
-    area.innerHTML=`<div class="score-ring" style="--ring:${deg}deg"><strong>${pct}%</strong></div><h3 style="text-align:center">${title}</h3><p style="text-align:center">أجبتِ عن ${finalScore} من 10 إجابات بشكل صحيح.</p><div style="text-align:center"><button class="btn light" onclick="startFinalQuiz()">إعادة الاختبار</button></div>`;
-    if(finalScore>=7)addScore(25,'مكافأة الاختبار النهائي +25');
-    return;
-  }
-  const x=finalQuestions[fqIndex];
-  area.innerHTML=`<div class="final-q"><div style="font-weight:900;margin-bottom:12px">السؤال ${fqIndex+1} من 10</div><div class="q">${x.q}</div><div class="options">${x.o.map((v,i)=>`<button class="option" onclick="answerFinal(${i})">${v}</button>`).join('')}</div><div class="progress"><div style="width:${(fqIndex/10)*100}%"></div></div></div>`;
-}
-function answerFinal(i){if(i===finalQuestions[fqIndex].a){finalScore++;addScore(5,'إجابة نهائية صحيحة +5');}fqIndex++;renderFinal();}
-
-// تحسين الشهادة
-const _makeCertificate=makeCertificate;
-makeCertificate=function(){_makeCertificate();const c=document.getElementById('certOutput');if(document.getElementById('nameInput').value.trim())c.classList.add('cert-print');};
 
 </script>
 </body>
